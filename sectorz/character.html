@@ -117,8 +117,8 @@
             <tr>
                 <th>Name</th>
                 <th>Chance <br>(out of d100)</th>
-                <th class="important">Description</th>
-                <th>Compensation</th>
+                <th width="90%">Description</th>
+                <th width="10%">Compensation</th>
             </tr>
         </thead>
         <tbody>
@@ -138,7 +138,139 @@
                 <td>You fully understand sign language, and can make a perception check with a static -2 modifier 
                     to read lips if looking at someone.</td>
             </tr>
+            <tr id="Amputation">
+                <th>Amputation</th>
+                <td>3-4</td>
+                <td>Your original biological leg is gone (you may choose which leg is missing). This is more of a neutral one as you
+                    can't recieve the <abbr title="Work in progress page"><a class="wip" href="health.html#Bitten">bitten</a></abbr> condition 
+                    anywhere in the specific leg area, though you have a -2 modifier on dexterity checks involving movement (doesn't effect
+                    weapon attacks, unless you are trying to kick with your non-missing leg or prosethetic.)</td>
+                <td>You start with a <abbr title="Work in progress page"><a class="wip" href="baseitems.html#Prosthetic">prosthetic leg.
+                </a></abbr></td>
+            </tr>
+            <tr id="IronDeficiency">
+                <th>Iron Deficiency</th>
+                <td>5-7</td>
+                <td>When participating in dexterity checks involving running, you have a debuff of -1 perception modifier temporarily.
+                    You recover 5 units of blood less every day than <abbr title="Work in progress page"><a class="wip" href="health.html#Blood">normal</a></abbr>.
+                </td>
+                <td class="notavailable">N/A</td>
+            </tr>
+            <tr id="Cataract">
+                <th>Cataract</th>
+                <td>8-9</td>
+                <td>Your sight is clouded, -2 to peception checks relating to sight.</td>
+                <td class="notavailable">N/A</td>
+            </tr>
+            <tr id="DrugAddiction">
+                <th>Drug Addiction</th>
+                <td>10-12</td>
+                <td>You are <abbr title="Work in progress page"><a class="wip" href="health.html#DrugAddiction">addicted</a></abbr> to a 
+                    drug, and going without it for a bit will give you the <abbr title="Work in progress page">
+                    <a class="wip" href="health.html#Withdrawal">withdrawal</a></abbr> condition.</td>
+                <td>You start with 15 units of the drug in some form.</td>
+            </tr>
+            <tr id="Smoker">
+                <th>Smoker</th>
+                <td>15-24</td>
+                <td>You are <abbr title="Work in progress page"><a class="wip" href="health.html#DrugAddiction">addicted</a></abbr> to 
+                    cigarettes/nicotine, and going without it will for a while give you the <abbr title="Work in progress page">
+                    <a class="wip" href="health.html#MinorWithdrawal">minor withdrawal</a></abbr> condition.</td>
+                <td>You start with a pack of 6 <abbr title="Work in progress page">
+                    <a class="wip" href="baseitems.html#Cigarette">cigarettes.</a></abbr></td>
+            </tr>
+            <tr id="Scarred">
+                <th>Scarred</th>
+                <td>25-29</td>
+                <td>You are marked with a permanent area of tissue reminding you of whatever happened in the past. 
+                    <abbr title="Work in progress page"><a class="wip" href="health.html#Pain">Pain</a></abbr> on the 
+                    specific limb area is doubled.</td>
+                <td class="notavailable">N/A</td>
+            </tr>
+            <tr id="PTSD">
+                <th>Post-traumatic Stress Disorder</th>
+                <td>25-29</td>
+                <td>You become emotionally unstable in ways depending on the trauma (chosen by player.) See the 
+                    <abbr title="Work in progress page"><a class="wip" href="health.html#PTSDAttack">emotionally unstable</a></abbr>
+                    condition.</td>
+                <td class="notavailable">N/A</td>
+            </tr>
+            <tr id="Schizophrenia">
+                <th>Schizophrenia</th>
+                <td>30-36</td>
+                <td>You experience illusions on a common occurance. From fake enemies, to conversations had with others.
+                    Your DM is to decide when these happen (if you haven't recently taken your meds, grandpa), and it requires both a 
+                    suceeded intelligence and perception check or the illusion(s) will occur.</td>
+                <td>A <abbr title="Work in progress page">
+                    <a class="wip" href="baseitems.html#PillBottle">prescription pill bottle</a></abbr> containing 12 pills (2 
+                    units of <abbr title="Work in progress page"><a class="wip" href="baseitems.html#Obpsychotex">Obpsychotex</a></abbr> 
+                    each.)</td>
+            </tr>
+            <tr id="Tapeworms">
+                <th>Tapeworms</th>
+                <td>37-40</td>
+                <td>You get less nutrition for each unit of food eaten or water drunken. Roll a d20 and then add the result to 30, that's
+                    how much percent of nutrition units are wasted.
+                </td>
+                <td>You double any starting or water food bought from the <a href="#CharacterShop">character shop</a>. 
+                    (Doesn't happen if no food bought at all.)</td>
+            </tr>
+            <tr id="Tinnitus">
+                <th>Tinnitus</th>
+                <td>41-49</td>
+                <td>You hear a constant ringing tone in your ear. -1 to perception checks that involve hearing.</td>
+                <td class="notavailable">N/A</td>
+            </tr>
+            <tr id="Type1Diabetes">
+                <th>Type 1 Diabetes</th>
+                <td>50-54</td>
+                <td>You'll need a dose of 5 units of insulin each day or you'll get the 
+                    <abbr title="Work in progress page"><a class="wip" href="health.html#Hyperglycemia">hyperglycemia</a></abbr> 
+                    condition and nasically, you'll slowly starve, no matter how much you eat.</td>
+                <td>You start with a bottle of 40 units of <abbr title="Work in progress page">
+                    <a class="wip" href="baseitems.html#Insulin">insulin</a></abbr>, as well as a 
+                    <abbr title="Work in progress page"><a class="wip" href="baseitems.html#Syringe">syringe/needle</a></abbr> 
+                    to inject it.</td>
+            </tr>
+            <tr id="Type2Diabetes">
+                <th>Type 2 Diabetes</th>
+                <td>55-59</td>
+                <td>You'll need a dose of 2.5 units of insulin each day or you'll get the 
+                    <abbr title="Work in progress page"><a class="wip" href="health.html#Hyperglycemia">hyperglycemia</a></abbr> 
+                    condition and basically, you'll slowly starve, no matter how much you eat.</td>
+                <td>You start with a bottle of 20 units of <abbr title="Work in progress page">
+                    <a class="wip" href="baseitems.html#Insulin">insulin</a></abbr>, as well as a 
+                    <abbr title="Work in progress page"><a class="wip" href="baseitems.html#Syringe">syringe/needle</a></abbr> 
+                    to inject it.</td>
+            </tr>
+            <tr id="FASD">
+                <th>Fetal Alcohol Spectrum Disorder</th>
+                <td>60-66</td>
+                <td>Your parents liked to party while you were in the womb. -1 attribute point to an attribute of choice (by the player.)</td>
+                <td class="notavailable">N/A</td>
+            </tr>
 
+            <tr id="Allergies">
+                <th>Allergies</th>
+                <td>81-86</td>
+                <td>When near the specific thing or thing(s) your character is allergic to, you must succeed a medium difficulty vitality check 
+                    or your character is given the <abbr title="Work in progress page"><a class="wip" href="health.html#AllergicAttack">
+                    allergic attack</a></abbr> condition.
+                </td>
+                <td>You start with a bottle of <abbr title="Work in progress page"><a class="wip" href="baseitems.html#Deallegrex">Deallegrex</a></abbr> 
+                    with 15 units of <abbr title="Work in progress page"><a class="wip" href="baseitems.html#InhalerMix">inhaler mix</a></abbr> 
+                    in case of attack.</td>
+            </tr>
+            <tr id="Asthma">
+                <th>Asthma</th>
+                <td>87-90</td>
+                <td>-1 modifier to dexterity checks involving running, must succeed an <b>easy</b> vitality check afterwards or
+                    the character is given the <abbr title="Work in progress page"><a class="wip" href="health.html#AsthmaAttack">
+                    asthma attack</a></abbr> condition.</td>
+                <td>You start with an <abbr title="Work in progress page"><a class="wip" href="baseitems.html#Inhaler">inhaler</a></abbr> 
+                    with 15 units of <abbr title="Work in progress page"><a class="wip" href="baseitems.html#InhalerMix">inhaler mix</a></abbr> 
+                    in case of attack.</td>
+            </tr>
             <tr id="Nothing">
                 <th>Nothing</th>
                 <td>91-100</td>
