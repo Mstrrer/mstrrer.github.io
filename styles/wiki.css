@@ -102,10 +102,18 @@ li {
     margin-bottom: .1em;
 }
 
+li.toc2 {
+    padding-left: 1.4em;
+}
+
 a {
     text-decoration: none;
     color: #0645ad;
     background: none;
+}
+
+a.wip {
+    color: #ba0000;
 }
 
 div.toc {
