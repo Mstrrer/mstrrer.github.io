@@ -1,31 +1,358 @@
 <!DOCTYPE html>  
 <html>
     <head>
-        <title>sector z </title>
+        <title>sector z health</title>
         <meta charset="UTF-8">
         <meta name="description" content="A game designed for zombie roleplaying games and etc.">
-        <link rel="icon" href="/assets/sectorz-icon.ico">
-        <link rel="stylesheet" type="text/css" href="styles/wiki.css">
+        <link rel="icon" href="../assets/sectorz-icon.ico">
+        <link rel="stylesheet" type="text/css" href="../styles/wiki.css">
     </head>
     <body>
-        <h1></h1>
-        <p></p>
+        <h1>Health</h1>
+        <p>Maintaining a healthy body is very important to surviving in the zombie apocalypse, or else you would.. you know.. die.</p>
         <div class="toc">
             <h3 class="toc">Contents</h3>
             <ul>
-                <li><a href="#">
-                        <span class="tocnum">1</span> <span class="toctext"></span>
+                <li><a href="#Basics">
+                        <span class="tocnum">1</span> <span class="toctext">The Basics</span>
                     </a></li>
-                <li><a href="#">
-                        <span class="tocnum">2</span> <span class="toctext"></span>
+                    <li class="toc2"><a href="#BasicProp">
+                        <span class="tocnum">1.1</span> <span class="toctext">Basic Properties</span>
                     </a></li>
-                <li><a href="#">
-                        <span class="tocnum">3</span> <span class="toctext"></span>
+                <li><a href="#Healing">
+                        <span class="tocnum">2</span> <span class="toctext">Fixing Your Broken Bones</span>
                     </a></li>
-                <li><a href="#">
-                        <span class="tocnum">4</span> <span class="toctext"></span>
+                <li><a href="#Injuries">
+                        <span class="tocnum">3</span> <span class="toctext">Injuries</span>
+                    </a></li>
+                <li><a href="#Physiology">
+                        <span class="tocnum">4</span> <span class="toctext">Physiology</span>
                     </a></li>
             </ul>
         </div>
+
+        <h2 id="Basics">The Basics</h2>
+        <p>The health system is quite easy to understand. First thing you should know, is that every injury has specific properties.<br>
+            These properties define how serious a wound is, what is affected by the severity of the wound, and how likely you are gonna
+            die. Injuries is a loose term but is still used for any effect or condition that the player is experiencing for simplicity.<br><br>
+            Another big thing to know is that injuries either worsen or get better when left alone (with treatment or not, depends on wound).
+            Most injuries will affect your overall vitality. Think of this as your health points, though just overly complicated for the sake
+            of realism.
+        </p>
+        <h3 id="BasicProp">Basic Properties</h3>
+        <ul style="padding-left: 1.4em;">
+            <li><p>The <b>location</b> of an injury indicates where it is located, as different locations affect different things. For example,
+                if you got a cut in your hand, you'd likely be fine and it would heal up fast and easy. Though, if you got a cut in your
+                eye, you might not be able to see for a while. Now, understand that some injuries are non location-specific, and is 
+                affecting the whole body.</p></li>
+            <li><p>The <b>severity</b> or strength of an injury indicates how screwed you are, every wound has a specific line of
+                effects that change depending on the severity. Though, this severity can decay or worsen depending on the injury.</p></li>
+            <li><p>As stated like a second ago, the <b>rate of decay</b> says how much a condition worsens or decays in a specific amount of
+                time. If it gets worse through time, maybe you should patch that up before you lose too much blood.</p></li>
+            <li id="Pain"><p>You may ask, how do you determine if someone is unconscious... Well that answer is <b>pain</b>, it uses the same system
+                as RimWorld does, where you have a certain pain threshold that determines when you fall. Most wounds give you a good
+                amount of pain. And your pain threshold is increased by 10 pain units for every vitality point above 0 (with a base
+                pain threshold of 80).</p></li>
+            <li><p>Some injuries will be mostly hidden to the players (like blood loss), because of this, most wounds/injuries are given 
+                a symptoms (aka visual or feeling effects) that can help you determine what this hidden wound is. <b>Diagnosing</b>
+                is done by an Intelligence check (described below), high difficulty diagnosis can result is misdiagnosing!</p></li>
+        </ul>
+        <p>As mentioned above, diagnosing is decided by an Intelligence check. Though not just diagnosing is dictated by this, medical
+            procedures is also dictated by this. Luckily, you don't have to do it every time (unless you want to, in case you believe
+            you've misdiagnosed yourself) as you remember things (amazing, never knew that). These memories are stored in the other section
+            of your character sheet. Remember, a lot of things are common knowledge, and are by default already remembered (unless you have
+            amnesiac detriment).</p>
+
+        <h2 id="Healing">Fixing Your Broken Bones</h2>
+        <p>Certain items fix certain injuries, some injuries have multiple fixes, ranging from how effective, and other stuff worsen the
+            injury. If you wanna see the medical items, visit <a href="baseitems.html#Medical">this</a>.</p>
+        
+        <h2 id="Injuries">Injuries</h2>
+        <p>Don't forget that these aren't all injuries, some are either hidden or improvised (aka situation where I didn't think this would
+            require this injury). Though, a lot of injuries have secret properties (like visual effect) that'll usually require a diagnosis to
+            figure out. (Caution: You may know in real life these properties, but remember your character has a seperate mind to yours.)
+        </p>
+        <table>
+            <thead>
+                <tr>
+                    <th width="10%">Name</th>
+                    <th>Limb<br>Specific?</th>
+                    <th>Diagnosis<br>Difficulty</th>
+                    <th>Decay<br>Rate</th>
+                    <th width="30%">Effect</th>
+                    <th width="20%">Visual Effect</th>
+                    <th class="important">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="Bleeding">
+                    <td class="center">Bleeding</td>
+                    <td class="center">Yes</td>
+                    <td class="cell-na">N/A</td>
+                    <td class="cell-na"><abbr title="Bleeding is patched up slowly without medical care">SECRET</abbr></td>
+                    <td>If clothing covers area of bleeding, that area on the clothing will become bloody.
+                        <br>Gives <a href="#BloodLoss">blood loss</a> with a strength based on how much blood you have left.</td>
+                    <td>Dark red blood oozing out of your body and onto the floor where the ground will consume it.</td>
+                    <td>Got stabbed or something...</td>
+                </tr>
+                <tr id="Scabbed">
+                    <td class="center">Scabbed</td>
+                    <td class="center">Yes</td>
+                    <td class="cell-na">N/A</td>
+                    <td class="cell-na"><abbr title="Scabs fall off after outer skin is repaired">SECRET</abbr></td>
+                    <td>Appears after minor bleeding was naturally healed without bandages.</td>
+                    <td>Dark red hard bump/scab appeared where previous bleeding was.</td>
+                    <td>The effect of feeding your blood's addiction to oxygen.</td>
+                </tr>
+                <tr id="BloodLoss">
+                    <td class="center">Blood Loss</td>
+                    <td class="center">No</td>
+                    <td class="center">Medium</td>
+                    <td class="cell-na"><abbr title="Blood loss heals very slowly naturally">SECRET</abbr></td>
+                    <td class="cell-na"><abbr title="Blood loss will kill you if strong enough">SECRET</abbr></td>
+                    <td class="cell-na"><abbr title="Pale skin is often associated with blood loss">SECRET</abbr></td>
+                    <td>The effect of bleeding out until you have a lack of blood.</td>
+                </tr>
+                <tr id="Bruise">
+                    <td class="center">Bruise</td>
+                    <td class="center">Yes</td>
+                    <td class="cell-na">N/A</td>
+                    <td class="cell-na"><abbr title="Ice can speed up recovery">SECRET</abbr></td>
+                    <td class="cell-na"><abbr title="Definitely hurts more in those areas">SECRET</abbr></td>
+                    <td>Purple or dark brown spots (color of bruise depends on skin tone) on skin, sensitive to touch.</td>
+                    <td>The effect of recieving blunt trauma to skin and having blood vessels pop underneath your skin.</td>
+                </tr>
+                <tr id="Bite">
+                    <td class="center">Bite</td>
+                    <td class="center">Yes</td>
+                    <td class="cell-na">N/A</td>
+                    <td class="cell-na"><abbr title="Dealt similar to any other laceration/bleeding wound">SECRET</abbr></td>
+                    <td class="cell-na"><abbr title="Probably should take some antibiotics">SECRET</abbr></td>
+                    <td>A red, and bleeding, canine or human (or any other rabid animal) shaped bite mark.</td>
+                    <td>Ah crap, something stole my flesh!</td>
+                </tr>
+                <tr id="Infection">
+                    <td class="center">Infection</td>
+                    <td class="center">Yes</td>
+                    <td class="center">Medium</td>
+                    <td class="cell-na"><abbr title="Should most definitely take some antibiotics">SECRET</abbr></td>
+                    <td>Will kill unless amputated or dealt with before it's too late.</td>
+                    <td class="cell-na"><abbr title="Visual effects differ for all locations, but it may very obvious in some">SECRET</abbr></td>
+                    <td>Days without having to remove limb: <kbd>3</kbd></td>
+                </tr>
+                <tr id="Hypothermia">
+                    <td class="center">Hypothermia</td>
+                    <td class="center">No</td>
+                    <td class="center">Easy to Medium</td>
+                    <td class="cell-na"><abbr title="Get a jacket">
+                        SECRET</abbr></td>
+                    <td class="cell-na"><abbr title="Can freeze you to death, if not dealt with">SECRET</abbr></td>
+                    <td>Coldness, runny nose, etc.</td>
+                    <td>Caused by being too cold.</td>
+                </tr>
+                <tr id="Hyperthermia">
+                    <td class="center">Hyperthermia</td>
+                    <td class="center">No</td>
+                    <td class="center">Easy to Hard</td>
+                    <td class="cell-na"><abbr title="Probably best to sit in a freezer or something.">
+                        SECRET</abbr></td>
+                    <td class="cell-na"><abbr title="Will kill you, very fast">SECRET</abbr></td>
+                    <td>"Why yes, doctor. I <b>am</b> the sun."</td>
+                    <td>Like hypothermia, but less known, and way more dangerous.</td>
+                </tr>
+                <tr id="Frostbite">
+                    <td class="center">Frostbite</td>
+                    <td class="center">Yes</td>
+                    <td class="center">Easy to Medium</td>
+                    <td class="cell-na">SECRET</td>
+                    <td>Severe cases may require amputation.</td>
+                    <td class="cell-na"><abbr title="Often depicted in media as blackened or reddened skin.">
+                        SECRET</abbr></td>
+                    <td>Caused by specific areas having prolonged exposure to cold.</td>
+                </tr>
+                <tr id="Encumbered">
+                    <td class="center">Encumbered</td>
+                    <td class="center">No</td>
+                    <td class="cell-na">N/A</td>
+                    <td class="cell-na">N/A</td>
+                    <td>-1 to -4 penalty to dexterity checks based on severity.</td>
+                    <td>Heavy.</td>
+                    <td>Caused by carrying too much stuff and/or too heavy stuff.</td>
+                </tr>
+                <tr id="Wet">
+                    <td class="center">Wet</td>
+                    <td class="center">No<br>(for simplicity)</td>
+                    <td class="cell-na">N/A</td>
+                    <td class="cell-na"><abbr title="You dry up naturally in doors, but can dry up fast in heated areas">SECRET</abbr></td>
+                    <td>Higher chance to catch a <a href="#CommonCold">cold</a> and/or <a href="#Hypothermia">hypothermia</a>.</td>
+                    <td>You are soaking.</td>
+                    <td>Caused by getting wet, who could've known...</td>
+                </tr>
+                <tr id="Malnutrition">
+                    <td class="center">Malnutrition</td>
+                    <td class="center">No</td>
+                    <td class="center">Medium</td>
+                    <td class="cell-na"><abbr title="Only goes down when hunger satiated">SECRET</abbr></td>
+                    <td>You require more nutrition to become satiated. -1 to -2 penalty to Intelligence and Strength checks.</td>
+                    <td>Weight loss, fatigue, and more.</td>
+                    <td>Caused by prolonged lack of food.</td>
+                </tr>
+                <tr id="Dehydration">
+                    <td class="center">Dehydration</td>
+                    <td class="center">No</td>
+                    <td class="center">Medium</td>
+                    <td class="cell-na"><abbr title="Only goes down when thirst satiated">SECRET</abbr></td>
+                    <td>You require more water to become satiated. -1 to -2 penalty to Intelligence, Strength, and Dexterity checks.</td>
+                    <td>Thirst, dizzyness, dark yellow piss.</td>
+                    <td>Caused by prolonged lack of water. Way more serious compared to malnutrition.</td>
+                </tr>
+                <tr id="FoodPoisoning">
+                    <td class="center">Food Poisoning</td>
+                    <td class="center">No</td>
+                    <td class="center">Easy to Medium</td>
+                    <td class="cell-na"><abbr title="Naturally goes down">SECRET</abbr></td>
+                    <td>Vomiting is quite loud, and stops what you are doing temporarily, making you vulnerable.</td>
+                    <td>You are vomit.</td>
+                    <td>Caused by eating uncooked food.</td>
+                </tr>
+                <tr id="CommonCold">
+                    <td class="center">Common Cold</td>
+                    <td class="center">No</td>
+                    <td class="center">Easy to Medium</td>
+                    <td class="cell-na"><abbr title="Soup">SECRET</abbr></td>
+                    <td>Coughing and sniffling is also loud, not as much, but that is traded off for how commonly you cough and sniffle.</td>
+                    <td>Symptoms described in effects.</td>
+                    <td>Caused by contracting the Common Cold.</td>
+                </tr>
+                <tr id="Burn">
+                    <td class="center">Burn</td>
+                    <td class="center">Yes</td>
+                    <td class="center">Easy</td>
+                    <td class="cell-na"><abbr title="Bandaging might help">SECRET</abbr></td>
+                    <td class="cell-na"><abbr title="Sizzle... hurt many, damages skin">SECRET</abbr></td>
+                    <td>Blisters to peeling to extreme skin damage.</td>
+                    <td>Caused by getting too comfy with the fireplace.</td>
+                </tr>
+                <tr id="Drunk">
+                    <td class="center">Drunk</td>
+                    <td class="center">No</td>
+                    <td class="center">Easy</td>
+                    <td class="cell-na"><abbr title="Needs a bit of time">SECRET</abbr></td>
+                    <td>Impaired attributes, -1 penalty to perception checks, -2 penalty to intelligence checks.</td>
+                    <td>Blisters to peeling to extreme skin damage.</td>
+                    <td>Caused by getting too comfy with the fireplace.</td>
+                </tr>
+                <tr id="Tired">
+                    <td class="center">Tired</td>
+                    <td class="center">No</td>
+                    <td class="center">Very Easy</td>
+                    <td class="cell-na"><abbr title="Fixed by sleeping">SECRET</abbr></td>
+                    <td>Impaired attributes, -1 penalty to perception checks, -1 penalty to intelligence checks. High severity tiredness can 
+                        induce black-outs.
+                    </td>
+                    <td>Eye bags, fatigue, and more...</td>
+                    <td>Caused by not sleeping a night.</td>
+                </tr>
+                <tr id="Gunshot">
+                    <td class="center">Gunshot Wound</td>
+                    <td class="center">Yes</td>
+                    <td class="center">Easy</td>
+                    <td class="cell-na"><abbr title="Requires immediate attention">SECRET</abbr></td>
+                    <td>Induced bleeding, deep wound, can puncture and affect organs. Bullet should be removed before stitching up.
+                    </td>
+                    <td>You have litterally been shot, Roosevelt, why are you continuing your speech?</td>
+                    <td>Bullet in the body, all I have to say.</td>
+                </tr>
+
+
+
+                <tr id="AllergicAttack">
+                    <td class="center">Allergic Attack</td>
+                    <td class="center">No</td>
+                    <td class="center">Easy</td>
+                    <td class="cell-na"><abbr title="Often decays quickly after a couple hours by itself.">
+                        SECRET</abbr></td>
+                    <td>Minimal to heavy penalty, depends on how allergic you are. Penalty involves penalizing perception
+                        attribute based on strength.
+                    </td>
+                    <td>Your nose is too stuffed for you not to notice.</td>
+                    <td>Smelling flowers = death penalty.</td>
+                </tr>
+                <tr id="AsthmaAttack">
+                    <td class="center">Asthma Attack</td>
+                    <td class="center">No</td>
+                    <td class="center">Easy</td>
+                    <td class="cell-na"><abbr title="Often decays quickly when relaxing for a bit">
+                        SECRET</abbr></td>
+                    <td>Minimal to heavy penalty, depends on how exhausted you are. Penalty involves penalizing dexterity moderately.
+                        If heavy activity continues, can get worse and worse, until the point where you move as fast as a slug.
+                    </td>
+                    <td>Exhaustion, heavy breathing, slight aphyxiation.</td>
+                    <td>Associated with the inhaler, because that's what you use.</td>
+                </tr>
+                <tr id="Psychosis">
+                    <td class="center">Psychosis</td>
+                    <td class="center">No</td>
+                    <td class="center">Easy to Medium</td>
+                    <td class="cell-na">N/A</td>
+                    <td>Character experiences illusions commonly, from minor feeling/noise illusions to mistaken fake enemies.</td>
+                    <td>Illusions, slight to moderate emotional changes.</td>
+                    <td><b><i>BEES! BEES! THEY'RE IN MY EYES!</i></b></td>
+                </tr>
+                <tr id="Hyperglycemia">
+                    <td class="center">Hyperglycemia</td>
+                    <td class="center">No</td>
+                    <td class="center">Easy to Hard</td>
+                    <td class="cell-na"><abbr title="Oh, no! Looks like grandpa forgot to take his insulin.">
+                        SECRET</abbr></td>
+                    <td class="cell-na"><abbr title="Can kill you, eventually">SECRET</abbr></td>
+                    <td class="cell-na"><abbr title="Will really feel not good, like seriously. Also fruity breath for some reason">
+                        SECRET</abbr></td>
+                    <td>Argg! Spongebob me boy, I've forgotten to take my insulin and will die within minutes.</td>
+                </tr>
+                <tr id="DrugAddiction">
+                    <td class="center">Drug Addiction</td>
+                    <td class="center">No</td>
+                    <td class="center">Easy (If knowingly experiencing withdrawal)</td>
+                    <td class="cell-na"><abbr title="The word 'cold turkey' is often thrown around when the topic of addiction comes up">
+                        SECRET</abbr></td>
+                    <td class="cell-na"><abbr title="Will really want drug if gone without for a bit.">SECRET</abbr></td>
+                    <td class="cell-na"><abbr title="Could show no effect or could, but depends on the drug addicted to">SECRET</abbr></td>
+                    <td>"Aye bruv got a ciggie?" – British man or something</td>
+                </tr>
+                <tr id="Withdrawal">
+                    <td class="center">Withdrawal</td>
+                    <td class="center">No</td>
+                    <td class="center">Easy to Medium</td>
+                    <td class="cell-na"><abbr title="Satiating your addiction may help">
+                        SECRET</abbr></td>
+                    <td class="cell-na"><abbr title="Might not feel that well, your body rejects the lack of whatever you are addicted to">
+                        SECRET</abbr></td>
+                    <td class="cell-na"><abbr title="Withdrawal effects differ from drug to drug to thing to whatever">
+                        SECRET</abbr></td>
+                    <td>Money jumpscare <img alt="moneyjumpscare.gif" src="../assets/money-jumpscare.gif" width="25" height="25"></td>
+                </tr>
+                <tr id="PTSDAttack">
+                    <td class="center">Extreme Emotional Attack</td>
+                    <td class="center">No</td>
+                    <td class="center">Medium</td>
+                    <td class="cell-na"><abbr title="Calm down!">
+                        SECRET</abbr></td>
+                    <td>You experience extreme mental stress and begin to break down emotionally, getting fast mood swings, and etc.
+                    </td>
+                    <td>You'll know when it happens.</td>
+                    <td>Uh oh! Looks like I've just remembered my trauma. Dubehebeuhuhejugehuho hoo AHHH!!!</td>
+                </tr>
+                <tr id="Necrotosis">
+                    <td class="cell-na"><abbr title="Maybe you could learn the name through the news">SECRET</abbr></td>
+                    <td class="center">Yes</td>
+                    <td class="center">Medium to Hard</td>
+                    <td class="cell-na">SECRET</td>
+                    <td class="cell-na">SECRET</td>
+                    <td class="cell-na">SECRET</td>
+                    <td>"Wow, I really don't know what this is!" ⁠–⁠ You</td>
+                </tr>
+            </tbody>
+        </table>
     </body>
 </html>
