@@ -1,31 +1,383 @@
-<!DOCTYPE html>  
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>sector z </title>
-        <meta charset="UTF-8">
-        <meta name="description" content="A game designed for zombie roleplaying games and etc.">
-        <link rel="icon" href="/assets/sectorz-icon.ico">
-        <link rel="stylesheet" type="text/css" href="styles/wiki.css">
-    </head>
-    <body>
-        <h1></h1>
-        <p></p>
-        <div class="toc">
-            <h3 class="toc">Contents</h3>
-            <ul>
-                <li><a href="#">
-                        <span class="tocnum">1</span> <span class="toctext"></span>
-                    </a></li>
-                <li><a href="#">
-                        <span class="tocnum">2</span> <span class="toctext"></span>
-                    </a></li>
-                <li><a href="#">
-                        <span class="tocnum">3</span> <span class="toctext"></span>
-                    </a></li>
-                <li><a href="#">
-                        <span class="tocnum">4</span> <span class="toctext"></span>
-                    </a></li>
-            </ul>
-        </div>
-    </body>
+
+<head>
+    <title>sector z items</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="A game designed for zombie roleplaying games and etc.">
+    <link rel="icon" href="../assets/sectorz-icon.ico">
+    <link rel="stylesheet" type="text/css" href="../styles/wiki.css">
+</head>
+
+<body>
+    <h1>Base Items</h1>
+    <p>Welcome to the list of items commonly known to the civilian eye. I don't know what else to say.</p>
+    <p><b>Please note that a lot will be completely hidden or improvised if we get to it in game because I can't include
+            everything.
+            Additionally, remember that there is no spatial storage limit, so weight is more of a representation of both
+            space and the actual
+            weight of an object.
+        </b></p>
+    <div class="toc">
+        <h3 class="toc">Contents</h3>
+        <ul>
+            <li><a href="#Weapons">
+                    <span class="tocnum">1</span> <span class="toctext">Weapons</span>
+                </a></li>
+            <li class="toc2"><a href="#WeaponTypes">
+                    <span class="tocnum">1.1</span> <span class="toctext">Weapon Types</span>
+                </a></li>
+            <li><a href="#Ammunition">
+                    <span class="tocnum">2</span> <span class="toctext">Ammunition</span>
+                </a></li>
+            <li><a href="#Medical">
+                    <span class="tocnum">3</span> <span class="toctext">Medical Objects</span>
+                </a></li>
+            <li><a href="#">
+                    <span class="tocnum">4</span> <span class="toctext"></span>
+                </a></li>
+        </ul>
+    </div>
+
+    <h2 id="Weapons">Weapons</h2>
+    <p>Canada is known for hunting, and you'll often find hunting rifles around, but only sometimes something for self
+        defense.
+        Why is that? Well, due to the restrictions of guns in Canada, not many civilians have as much guns as their
+        redneck neighbors
+        in the south. Though, you might find a load of good stuff in specific places.
+    </p>
+    <p>But woah, don't just be mindlessly swinging your stuff! Blunt and sharp weapons have chances to break on failed
+        checks, rendering
+        their damage miniscule, but still able to be used. And if a gun is just an unreliable gun or dirty or bloody
+        (which usually comes from bashing a zombie's head
+        in and it splats onto your gun), you have a chance for it to jam every time you shoot, this chance is low, but
+        still a possibility.</p>
+
+    <h3 id="WeaponTypes">Weapon Types</h3>
+    <p>There are a few different weapon types that revolve around specific damage or intensity. Here's a list:</p>
+    <ul style="padding-left: 1.4em;">
+        <li>
+            <p><b>Firearms</b> - Represents bigger, stronger hitting, firearms. Usually rifles, shotguns, submachine
+                guns, and etc.</p>
+        </li>
+        <li>
+            <p><b>Smallarms</b> - Represents smaller handguns, and more common, firearms.</p>
+        </li>
+        <li>
+            <p><b>Blunt</b> - Blunt melee is a weapon that does damage with a bashing movement,
+                and usually never involves cutting open skin. Very useful for knocking down zombies and others.</p>
+        </li>
+        <li>
+            <p><b>Sharp</b> - Sharp melee is a weapon that does damage by cutting open skin, often inflicting more pain,
+                and a slow killing
+                bleed effect. Not reccomended for knock back and etc.</p>
+        </li>
+    </ul>
+    <p>Another note is that almost every weapon can be used as a blunt weapon if you use it correctly, it just won't be
+        effective as
+        standard blunt weapons. Though, can come in handy if you run out of ammunition for your rifle.</p>
+
+
+    <table>
+        <thead>
+            <tr>
+                <th width="10%">Name</th>
+                <th>Weapon<br>Type</th>
+                <th width="8%">Damage Type<br>Inflicted</th>
+                <th class="important">Description</th>
+                <th>Weight<br>(lb.)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="M625Revolver">
+                <td class="center">Smith & Wesson<br>Model 625</td>
+                <td class="center">Smallarms</td>
+                <td class="center"><a href="health.html#Gunshot">Gunshot</a>, <a
+                        href="health.html#Bleeding">Bleeding</a></td>
+                <td>Fires .45 <abbr title="Automatic Colt Pistol">ACP</abbr> cartridges, 6 round cylinder feeding
+                    system, uses moon clips
+                    to load.</td>
+                <td class="center">3.5</td>
+            </tr>
+            <tr id="MP9Pro">
+                <td class="center">Smith & Wesson<br>M&P 9 <br>Pro Series</td>
+                <td class="center">Smallarms</td>
+                <td class="center"><a href="health.html#Gunshot">Gunshot</a>, <a
+                        href="health.html#Bleeding">Bleeding</a></td>
+                <td>Chambered for 9x19mm Parabellum rounds, semi-automatic, used in a couple
+                    of Canadian police forces, though not restricted to police.</td>
+                <td class="center">3</td>
+            </tr>
+            <tr id="Colt1911">
+                <td class="center">Colt 1911</td>
+                <td class="center">Smallarms</td>
+                <td class="center"><a href="health.html#Gunshot">Gunshot</a>, <a
+                        href="health.html#Bleeding">Bleeding</a></td>
+                <td>Chambered for .45 <abbr title="Automatic Colt Pistol">ACP</abbr> rounds, semi-automatic, was
+                    commonly used in Canadian
+                    forces during both world wars.</td>
+                <td class="center">3.2</td>
+            </tr>
+
+            <tr id="KitchenKnife">
+                <td class="center">Kitchen knife</td>
+                <td class="center">Sharp</td>
+                <td class="center"><a href="health.html#Cut">Cut</a>, <a href="health.html#Bleeding">Bleeding</a></td>
+                <td>Average stabber.</td>
+                <td class="center">1.4</td>
+            </tr>
+            <tr id="FryingPan">
+                <td class="center">Frying pan</td>
+                <td class="center">Blunt</td>
+                <td class="center"><a href="health.html#Bruise">Bruise</a></td>
+                <td>Medium blunt object with a large effect area.</b>.</td>
+                <td class="center">2.3</td>
+            </tr>
+            <tr id="Wrench">
+                <td class="center">Wrench</td>
+                <td class="center">Blunt</td>
+                <td class="center"><a href="health.html#Bruise">Bruise</a></td>
+                <td>Short blunt object, heavy.</td>
+                <td class="center">2</td>
+            </tr>
+            <tr id="BaseballBat">
+                <td class="center">Baseball Bat</td>
+                <td class="center">Blunt</td>
+                <td class="center"><a href="health.html#Bruise">Bruise</a></td>
+                <td>Standard blunt object.</td>
+                <td class="center">2.6</td>
+            </tr>
+            <tr id="HockeyStick">
+                <td class="center">Hockey Stick</td>
+                <td class="center">Blunt</td>
+                <td class="center"><a href="health.html#Bruise">Bruise</a></td>
+                <td>Common, love hockey. A longer blunt object for longer distances.</td>
+                <td class="center">1.8</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 id="Ammunition">Ammunition</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th width="10%">Name</th>
+                <th>Subsonic?</th>
+                <th width="8%">Rounds</th>
+                <th class="important">Description</th>
+                <th>Weight<br>(lb.)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="9mmBox">
+                <td class="center">9x19mm Parrabellum Box</a></td>
+                <td class="center">No</td>
+                <td class="cell-na">NO DEFINITE</td>
+                <td>Also known as 9mm. Originates from the German Empire, and was designed 13 years before the first
+                    world war.
+                    Commonly used in military handguns and submachine gun cartridges.</td>
+                <td class="center">0.5 + 0.2 per bullet</td>
+            </tr>
+            <tr id="45ACPBox">
+                <td class="center">.45 ACP Box</a></td>
+                <td class="center">Yes</td>
+                <td class="cell-na">NO DEFINITE</td>
+                <td>Subsonic. Also known as .45 Auto. Originates from the United States of America, and was designed 10
+                    years before the first
+                    world war. The direct standard for the classic M1911.</td>
+                <td class="center">0.5 + 0.2 per bullet</td>
+            </tr>
+            <tr id="9mmBullet">
+                <td class="center">9x19mm Parrabellum Bullet</a></td>
+                <td class="center">No</td>
+                <td class="center">1</td>
+                <td>A smaller bullet used commonly.</td>
+                <td class="center">0.2</td>
+            </tr>
+            <tr id="45ACPBullet">
+                <td class="center">.45 ACP Bullet</a></td>
+                <td class="center">Yes</td>
+                <td class="center">1</td>
+                <td>A subsonic and thicker bullet standardized for the 1911.</td>
+                <td class="center">0.2</td>
+            </tr>
+            <tr id="Colt1911Magazine">
+                <td class="center">Colt 1911 Magazine</a></td>
+                <td class="center">Yes</td>
+                <td class="center">7</td>
+                <td>A 7 round magazine for your M1911, chambered for .45 ACP.</td>
+                <td class="center">0.8</td>
+            </tr>
+            <tr id="MoonClip">
+                <td class="center">Moon Clip</a></td>
+                <td class="center">Yes</td>
+                <td class="center">6</td>
+                <td>A 6 round moon clip for reloading your revolver, chambered for .45 ACP.</td>
+                <td class="center">0.6</td>
+            </tr>
+            <tr id="MP9Magazine">
+                <td class="center">M&P 9 Pro Magazine</a></td>
+                <td class="center">No</td>
+                <td class="center">10</td>
+                <td>A 10 round magazine for your M&P 9 Pro Series, chambered for 9x19mm Parabellum.</td>
+                </td>
+                <td class="center">0.8</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 id="Medical">Medical Objects</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th width="10%">Name</th>
+                    <th width="15%">Used for</th>
+                    <th class="important">Description</th>
+                    <th>Weight<br>(lb.)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="AlcoholWipe">
+                    <td class="center">Alcohol Wipe</td>
+                    <td class="center"><a href="health.html#Infection">Infection</a> (Prevention)</td>
+                    <td>Used to sterilize dirty wounds and prevent infections.</td>
+                    <td class="center">0.2</td>
+                </tr>
+                <tr id="BandAid">
+                    <td class="center">Band-aid</td>
+                    <td class="center"><a href="health.html#Bleeding">Bleeding</a>, <a href="health.html#Cut">Cuts</a>
+                        (Minor),<br>
+                        <a href="health.html#Bite">Bites</a> (Minor)
+                    </td>
+                    <td>A smaller, lightweight, and less serious version to the <a class="wip"
+                            href="#Bandage">bandage</a>.</td>
+                    <td class="center">0.1</td>
+                </tr>
+                <tr id="Insulin">
+                    <td class="center">Insulin</td>
+                    <td class="center"><a href="health.html#Hyperglycemia">Hyperglycemia</a></td>
+                    <td>A bottle of containing a maximum of 40 units of insulin, use a syringe to extract the insulin
+                        from the bottle.</td>
+                    <td class="center">2</td>
+                </tr>
+                <tr id="Deallegrex">
+                    <td class="center">Deallegrex</td>
+                    <td class="center"><a href="health.html#AllergyAttack">Allergy Attack</a></td>
+                    <td>Used to prevent or currently cure allergies temporarily. Contains a maximum of 10 pills.</td>
+                    <td class="center">0.8</td>
+                </tr>
+                <tr id="Obpsychotex">
+                    <td class="center">Obpsychotex</td>
+                    <td class="center"><a href="health.html#Psychosis">Psychosis</a></td>
+                    <td>A dose of 2 pills will prevent or cure psychosis temporarily. Contains a maximum of 20 pills.
+                    </td>
+                    <td class="center">0.8</td>
+                </tr>
+                <tr id="SleepingTablets">
+                    <td class="center">Sleeping Tablets</td>
+                    <td class="center"><a href="health.html#Panic">Restlessness</a></td>
+                    <td>Used to almost instantly knock yourself out harmlessly (if you don't read the side effects on
+                        the box). Ignores your panic
+                        level (which will be zero again in the morning after taking these). Contains a maximum of 6
+                        pills.
+                    </td>
+                    <td class="center">0.6</td>
+                </tr>
+                <tr id="Painkillers">
+                    <td class="center">Painkillers</td>
+                    <td class="center"><a href="health.html#Pain">Pain</a></td>
+                    <td>Reduces a lot of pain temporarily. Contains a maximum of 8 pills.</td>
+                    <td class="center">0.8</td>
+                </tr>
+                <tr id="InhalerMix">
+                    <td class="center">Inhaler Mix</td>
+                    <td class="center"><a href="health.html#DrugAddiction">Inhaler</a> (Refilling)</td>
+                    <td>A bottle of a mix of chemicals used in an inhaler. Contains a maximum of 30 units. (Does not
+                        require syringe to extract)</td>
+                    <td class="center">1.8</td>
+                </tr>
+                <tr id="Cigarettes">
+                    <td class="center">Cigarettes</td>
+                    <td class="center"><a href="baseitems.html#Inhaler">Addiction</a> (Fullfilment), <a
+                            href="health.html#Panic">Panic</a></td>
+                    <td>Reduces panic a bit, but is addictive, and is not the best when paired with <a
+                            href="character.html#Asthma">asthma</a>.
+                        Contains a maximum of 8 cigarettes.</td>
+                    <td class="center">1</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 id="Nutrition">Nutrition</h3>
+        <p>Every piece of food and liquid has a specific nutrition value it adds to your nutrition meter, but you can't tell how much in an
+            item or how much food you have in you exactly (you tell through symptoms of hungriness.)
+        <table>
+            <thead>
+                <tr>
+                    <th width="10%">Name</th>
+                    <th class="important">Description</th>
+                    <th>Weight<br>(lb.)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="Beans">
+                    <td class="center">Canned Beans</td>
+                    <td>Contains 20 units of beans. Requires a can opener to open.</td>
+                    <td class="center">3</td>
+                </tr>
+                <tr id="CannedTomato">
+                    <td class="center">Canned Tomato</td>
+                    <td>Contains a whole tomato, not the soup. Requires a can opener to open.</td>
+                    <td class="center">3</td>
+                </tr>
+                <tr id="Soup">
+                    <td class="center">Canned Soup</td>
+                    <td>Contains 20 units of soup. Requires a can opener to open.</td>
+                    <td class="center">3</td>
+                </tr>
+                <tr id="Corn">
+                    <td class="center">Canned Corn</td>
+                    <td>Contains 20 units of corn. Requires a can opener to open.</td>
+                    <td class="center">3</td>
+                </tr>
+                <tr id="Chips">
+                    <td class="center">Chips</td>
+                    <td>Contains 25 units of chips.</td>
+                    <td class="center">3</td>
+                </tr>
+                <tr id="Water">
+                    <td class="center">Water Bottle</td>
+                    <td>Plain water. Contains 20 units of water.</td>
+                    <td class="center">3</td>
+                </tr>
+                <tr id="Milk">
+                    <td class="center">Milk Carton</td>
+                    <td>El cowa. Contains 15 units of milk.</td>
+                    <td class="center">3</td>
+                </tr>
+                <tr id="Soda">
+                    <td class="center">Soda Can</td>
+                    <td>Tasty. Contains 15 units of soda. Slight panic reduce due to tasty.</td>
+                    <td class="center">3</td>
+                </tr>
+                <tr id="DietSoda">
+                    <td class="center">Diet Soda Can</td>
+                    <td>Soda but has no sugar, calories, or fat. Does not tasty. Contains 15 units of diet soda.</td>
+                    <td class="center">3</td>
+                </tr>
+                <tr id="SparklingWater">
+                    <td class="center">Sparkling Water</td>
+                    <td>It's just carbonated <a href="baseitems.html#Water">water</a>. Contains 15 units of sparkling water.</td>
+                    <td class="center">3</td>
+                </tr>
+                <tr id="RedWine">
+                    <td class="center">Red Wine</td>
+                    <td>Can induce <a href="health.html#Drunk">drunkess</a>. Contains 50 units of red wine.</td>
+                    <td class="center">1</td>
+                </tr>
+            </tbody>
+        </table>
+</body>
+
 </html>
